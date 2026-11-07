@@ -1,0 +1,378 @@
+/* ===== Guía de identidad visual JHAB Web Solutions =====
+   Tipografía: Poppins (Google Fonts)
+   Íconos: Font Awesome, estilo sólido
+   Diseño mobile first: primero celular, luego computador */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+/* ===== 1. Paleta de colores ===== */
+:root {
+  --principal: #1e3a8a;   /* Azul: logo, encabezado, H1 y H2 */
+  --secundario: #0ea5e9;  /* Cian: íconos */
+  --acento: #f59e0b;      /* Ámbar: botones */
+  --fondo: #e9edf2;       /* Gris: fondo general */
+  --texto: #0f172a;       /* Texto principal, H3 a H5 */
+  --gris: #475569;        /* Texto secundario y H6 */
+  --borde: #d5dbe3;       /* Bordes */
+  --blanco: #ffffff;      /* Tarjetas */
+}
+
+/* ===== 2. Estilos generales ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;      /* Párrafo: 16 px, peso 400 */
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--fondo);
+  color: var(--texto);
+}
+
+/* Quita los estilos que trae Vite por defecto */
+#root {
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-align: left;
+}
+
+/* ===== 3. Tipografía H1 a H6 (tamaños de celular) ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: normal;
+  margin: 0 0 12px;
+}
+
+h1 { font-size: 28px; font-weight: 700; color: var(--principal); }
+h2 { font-size: 22px; font-weight: 600; color: var(--principal); }
+h3 { font-size: 20px; font-weight: 600; color: var(--texto); }
+h4 { font-size: 18px; font-weight: 600; color: var(--texto); }
+h5 { font-size: 16px; font-weight: 500; color: var(--texto); }
+h6 { font-size: 14px; font-weight: 500; color: var(--gris); }
+
+/* ===== 4. Íconos ===== */
+i {
+  color: var(--secundario);
+}
+
+/* ===== 5. Encabezado y logo ===== */
+.encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  background-color: var(--principal);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo p {
+  margin: 0;
+  line-height: 1.1;
+}
+
+.logo-nombre {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--blanco);
+}
+
+.logo-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: #bae6fd;
+}
+
+.slogan {
+  margin: 0;
+  font-size: 14px;
+  color: var(--acento);
+}
+
+/* ===== 6. Presentación ===== */
+.inicio {
+  padding: 32px 16px 8px;
+  text-align: center;
+}
+
+.inicio h6 {
+  color: #0369a1;
+  text-transform: uppercase;
+}
+
+.inicio p {
+  color: var(--gris);
+}
+
+/* ===== 7. Contenido y tarjetas (una columna en celular) ===== */
+.contenido {
+  display: grid;
+  gap: 20px;
+  padding: 16px;
+}
+
+.tarjeta {
+  background-color: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  padding: 24px;
+}
+
+/* ===== 8. Formulario ===== */
+label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+label i {
+  margin-right: 6px;
+}
+
+input[type='number'],
+select {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+.casilla {
+  font-weight: 400;
+}
+
+.casilla input {
+  margin-right: 8px;
+}
+
+.descuento-info {
+  margin: 4px 0 16px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: var(--principal);
+}
+
+.boton {
+  width: 100%;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.boton:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.boton-secundario {
+  margin-top: 10px;
+  background: #e2e8f0;
+}
+
+.boton-secundario:hover {
+  background: #cbd5e1;
+}
+
+.aviso {
+  margin: 12px 0 0;
+  font-size: 14px;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.exito {
+  color: #15803d;
+}
+
+/* ===== 9. Resumen de la cotización ===== */
+.resumen {
+  border-top: 4px solid var(--principal);
+}
+
+.resumen p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+.resumen span {
+  color: var(--gris);
+}
+
+.total {
+  font-size: 20px;
+}
+
+.total strong {
+  color: var(--principal);
+}
+
+.historial {
+  max-width: 1200px;
+  margin: 8px auto 24px;
+}
+
+.historial-titulo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.historial-titulo h2 {
+  margin-bottom: 4px;
+}
+
+.historial-titulo p,
+.estado-historial {
+  margin: 0;
+  color: var(--gris);
+}
+
+.contador {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: var(--principal);
+  font-size: 14px;
+}
+
+.tabla-contenedor {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  border-bottom: 1px solid var(--borde);
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  color: var(--gris);
+  font-weight: 600;
+}
+
+.acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.accion {
+  padding: 6px 9px;
+  border: 0;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.editar {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.borrar {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.estado-historial {
+  padding: 12px 0;
+}
+
+/* Botón de acción: ámbar con texto oscuro */
+.boton {
+  display: block;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--acento);
+  color: var(--texto);
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+}
+
+.boton:hover {
+  background-color: #d97706;
+  color: var(--texto);
+}
+
+.boton i {
+  color: var(--texto);
+}
+
+/* ===== 10. Pie de página ===== */
+.pie {
+  margin-top: 24px;
+  padding: 20px 16px;
+  background-color: var(--texto);
+  color: #cbd5e1;
+  font-size: 14px;
+  text-align: center;
+}
+
+.pie p {
+  margin: 4px 0;
+}
+
+/* ===== 11. Computador (desde 768 px) ===== */
+@media (min-width: 768px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+
+  .encabezado {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 40px;
+  }
+
+  .contenido {
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .historial {
+    margin-right: 24px;
+    margin-left: 24px;
+  }
+}
+
+@media (min-width: 1248px) {
+  .historial {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

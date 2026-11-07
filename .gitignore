@@ -1,0 +1,9 @@
+node_modules/
+dist/
+api-cotizador/data/*.sqlite
+api-cotizador/data/*.sqlite-shm
+api-cotizador/data/*.sqlite-wal
+.env
+.env.*
+!.env.example
+*.log
